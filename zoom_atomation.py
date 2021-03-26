@@ -6,10 +6,9 @@ import webbrowser
 schedule=[
     #enter your zoom class link and starttime and endtime(sepereted by ":")  in list
     ["https://zoom.us/j/9972367366","14:42","14:43"],
-    ["https://zoom.us/j/9972367366","14:44","16:00"]
-]
-classStarted = False
+    ["https://zoom.us/j/9972367366","14:44","16:00"]]
 k=1
+classStarted = False
 print()
 print("your python bot will attend your class , dont worry !!")
 print("you just chill and focus on your sleep") 
@@ -43,7 +42,7 @@ for i in schedule:
             if datetime.now().hour == int(i[2].split(':')[0]) and datetime.now().minute == int(i[2].split(':')[1]):
                 pyautogui.keyDown("x")
                 print("your class is attend sucessfully by your bot !!")
-                #for linux
+                #for linux uncomment the following block:
                 #---------------------
                 #pyautogui.keyDown("alt")
                 #pyautogui.press("q")
